@@ -111,6 +111,19 @@ for word, count in word2count.items():
         word_number += 1
 
 
+#Add encoder and decoder
+# PAD => pad
+# EOS => end of string
+# OUT => ALl filtered out due to threshold
+# SOS =>First word to start decording
+tokens = ['<PAD>', '<EOS>', '<OUT>', '<SOS>']
+
+for token in tokens:
+    questionswords2int[token] = len(questionswords2int) + 1
+
+for token in tokens:
+    answerwords2int[token] = len(answerwords2int) + 1
+
 
         
 
